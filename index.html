@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURELIA VANCE — Haute Interior Architecture & Spatial Design</title>
+  <meta name="description" content="Portfolio of Aurelia Vance — bespoke luxury interior design, architectural remodeling, and curated living spaces." />
+  
+  <!-- Google Fonts: Editorial Serif + Clean Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for minimal icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor Accent (Desktop) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- NAVIGATION -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-main">AURELIA VANCE</span>
+        <span class="logo-sub">STUDIO &bull; MILAN / NYC</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">Studio & Philosophy</a></li>
+          <li><a href="#projects" class="nav-link">Selected Works</a></li>
+          <li><a href="#services" class="nav-link">Expertise</a></li>
+          <li><a href="#contact" class="nav-link">Inquire</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline-nav">Book Consultation</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH 3-SECOND ROTATING BACKGROUND SLIDER -->
+  <section class="hero-section" id="hero">
+    <!-- Slides Background Container -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85');"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=85');"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=85');"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85');"></div>
+      </div>
+    </div>
+
+    <!-- Dark Architectural Vignette Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-line"></span>
+        <span class="tag-text">Spatial Poetics &bull; Curated Interiors</span>
+      </div>
+
+      <h1 class="hero-title">
+        Crafting spaces that echo <br>
+        <span class="italic-serif">serenity, form & human warmth.</span>
+      </h1>
+
+      <p class="hero-lead">
+        We transform bare spatial architecture into sensory, high-end living habitats where minimalist modernism embraces tactile luxury.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary">
+          Explore Portfolio <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <a href="#about" class="btn btn-secondary">
+          Meet Aurelia
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide Navigation & 3-Second Visual Indicator -->
+    <div class="hero-controls">
+      <div class="slide-counter">
+        <span class="current-slide" id="currentSlideNum">01</span>
+        <span class="counter-divider">/</span>
+        <span class="total-slides">04</span>
+      </div>
+      <div class="slide-progress">
+        <div class="progress-bar-fill" id="slideProgressBar"></div>
+      </div>
+      <div class="slide-dots" id="slideDots">
+        <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-down-indicator" aria-label="Scroll down">
+      <span class="mouse-icon"><span class="wheel"></span></span>
+      <span class="scroll-text">DISCOVER</span>
+    </a>
+  </section>
+
+  <!-- ABOUT SECTION WITH PORTRAIT & METRICS -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Portrait Image Column -->
+        <div class="about-visual">
+          <div class="image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80" 
+              alt="Aurelia Vance, Principal Architect & Interior Couturier" 
+              class="designer-portrait"
+              loading="lazy"
+            />
+            <div class="exp-badge">
+              <span class="badge-num">12+</span>
+              <span class="badge-label">Years of Spatial Mastery</span>
+            </div>
+          </div>
+          <div class="visual-decor"></div>
+        </div>
+
+        <!-- Narrative Column -->
+        <div class="about-narrative">
+          <div class="section-subtitle">PHILOSOPHY & PRINCIPAL</div>
+          <h2 class="section-title">
+            "A home should not be decorated; it should be <span class="italic-serif">felt</span>."
+          </h2>
+
+          <p class="about-para lead-para">
+            Founded by <strong>Aurelia Vance</strong>, our Milan & New York based studio conceives residences, private retreats, and art galleries that transcend momentary decor trends.
+          </p>
+
+          <p class="about-para">
+            With training at the Politecnico di Milano and years working alongside European heritage stonemasons, we approach interior design through light sculpturing, organic textural pairings, raw travertine, and quiet bespoke craft. Every corner is carefully calibrated to bring peaceful stillness to modern life.
+          </p>
+
+          <!-- Metrics Row -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">95+</span>
+              <span class="stat-desc">Executed Residencies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">18</span>
+              <span class="stat-desc">International Honors</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-desc">Custom Furniture Sourcing</span>
+            </div>
+          </div>
+
+          <!-- Signature / Direct Contact -->
+          <div class="signature-block">
+            <div class="signature-img">Aurelia Vance</div>
+            <div class="signature-role">Aurelia Vance — Principal Architect & Founder</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / PORTFOLIO GALLERY SECTION -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      
+      <div class="section-header-row">
+        <div>
+          <span class="section-subtitle">CURATED ARCHIVE</span>
+          <h2 class="section-title">Selected Spatial Interventions</h2>
+        </div>
+        <p class="header-desc">
+          A glimpse into our bespoke residential, commercial, and penthouse commissions across New York, Lake Como, and Kyoto.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-filter="all">All Spaces</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+        <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+        <button class="filter-btn" data-filter="commercial">Hospitality</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        
+        <!-- Project 1 -->
+        <article class="gallery-card" data-category="residential" data-title="Villa Serena Travertine Sanctum" data-location="Lake Como, Italy" data-year="2024" data-img="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Living room with travertine fireplace and bouclé armchairs" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Residential</span>
+                <span class="location">Lake Como</span>
+              </div>
+              <h3 class="card-title">Villa Serena Travertine Sanctum</h3>
+              <p class="card-snippet">Brushed Venetian plaster paired with raw unfilled travertine hearth and bespoke bouclé seating.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="gallery-card" data-category="penthouse" data-title="The Tribeca Monolith Loft" data-location="Manhattan, NYC" data-year="2023" data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Minimalist luxury kitchen and dining room" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Penthouse</span>
+                <span class="location">New York</span>
+              </div>
+              <h3 class="card-title">The Tribeca Monolith Loft</h3>
+              <p class="card-snippet">Double-height architectural ceiling with seamless smoked oak cabinetry and floating island marble.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="gallery-card" data-category="minimalist" data-title="Komorebi Kyoto Sanctuary" data-location="Kyoto, Japan" data-year="2024" data-img="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="Wabi-sabi minimalist living space with paper lanterns" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Minimalist</span>
+                <span class="location">Kyoto</span>
+              </div>
+              <h3 class="card-title">Komorebi Kyoto Sanctuary</h3>
+              <p class="card-snippet">Wabi-sabi sensibilities woven with handmade washi screens and low-profile hinoki wood fittings.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="gallery-card" data-category="commercial" data-title="Atelier Névé Art Salon" data-location="Zurich, Switzerland" data-year="2023" data-img="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="High ceiling gallery studio with warm tone chairs and sculptures" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Hospitality</span>
+                <span class="location">Zurich</span>
+              </div>
+              <h3 class="card-title">Atelier Névé Art Salon</h3>
+              <p class="card-snippet">Boutique high-jewelry showroom focused on diffuse acoustic wall paneling and shadow play.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="gallery-card" data-category="residential" data-title="Casa Calma Coastal Estate" data-location="Mallorca, Spain" data-year="2024" data-img="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Earthy bedroom suite with arched opening and pure linen curtains" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Residential</span>
+                <span class="location">Mallorca</span>
+              </div>
+              <h3 class="card-title">Casa Calma Coastal Estate</h3>
+              <p class="card-snippet">Sunken architectural bathing suites, limewash walls, and Belgian linen upholstery reflecting sea air.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="gallery-card" data-category="penthouse" data-title="Belgravia Glass Pavilion" data-location="London, UK" data-year="2022" data-img="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1400&q=85">
+          <div class="card-inner">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=900&q=85" alt="Modern open kitchen with fluted wood island and brass fixtures" loading="lazy" />
+              <div class="card-hover-overlay">
+                <span class="view-btn"><i class="fa-solid fa-expand"></i> View Detail</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="category">Penthouse</span>
+                <span class="location">London</span>
+              </div>
+              <h3 class="card-title">Belgravia Glass Pavilion</h3>
+              <p class="card-snippet">Floor-to-ceiling glass envelopes complemented by patinated bronze details and Calacatta Viola.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE / SERVICES ACCORDION & CARDS -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-subtitle">DISCIPLINES</span>
+        <h2 class="section-title">End-to-End Architectural Interior Mastery</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box">
+          <span class="service-num">01</span>
+          <h3 class="service-name">Spatial Planning & Structural Architecture</h3>
+          <p class="service-desc">Complete schematic interior re-imagination, partition removal, circulation flow optimization, and 3D architectural CAD modeling.</p>
+          <ul class="service-bullets">
+            <li>Demolition & Spatial Re-layout</li>
+            <li>Custom Lighting Schemes & Shadows</li>
+            <li>Regulatory & Contractor Governance</li>
+          </ul>
+        </div>
+
+        <div class="service-box">
+          <span class="service-num">02</span>
+          <h3 class="service-name">Bespoke Millwork & Materiality Curation</h3>
+          <p class="service-desc">We work with generational stonemasons in Tuscany and master joiners in Copenhagen to build heirloom built-ins and custom furniture.</p>
+          <ul class="service-bullets">
+            <li>Quarry-Selected Natural Marble & Onyx</li>
+            <li>Hand-Finished Oak, Walnut & Lacquer</li>
+            <li>Acoustic & Tactile Wall Finishes</li>
+          </ul>
+        </div>
+
+        <div class="service-box">
+          <span class="service-num">03</span>
+          <h3 class="service-name">Full Furnishing, Art Advisory & Turnkey Delivery</h3>
+          <p class="service-desc">Curating rare 20th-century vintage pieces, commissioned artwork, tactile linens, and ambient scent scapes until your key turns in the door.</p>
+          <ul class="service-bullets">
+            <li>International Vintage Sourcing</li>
+            <li>Private Gallery Art Commissioning</li>
+            <li>Complete Turnkey Move-In Styling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS & TESTIMONIAL QUOTE -->
+  <section class="quote-section">
+    <div class="container text-center">
+      <div class="quote-mark">“</div>
+      <blockquote class="editorial-quote">
+        Aurelia Vance has redefined residential serenity. Her spaces do not shout for attention; they breathe quietly, holding light in ways you never thought possible.
+      </blockquote>
+      <div class="quote-author">— ARCHITECTURAL DIGEST &bull; EUROPEAN COLLECTIVE</div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CONSULTATION BOOKING -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div class="contact-info-col">
+          <span class="section-subtitle">COMMENCE A PROJECT</span>
+          <h2 class="section-title">Let’s sculpt your vision together.</h2>
+          <p class="contact-desc">
+            We accept a limited roster of 8 residential and commercial clients per calendar year to ensure uncompromised devotion to detailing.
+          </p>
+
+          <div class="contact-details">
+            <div class="c-detail-row">
+              <span class="c-label">Direct Studio Inquiries:</span>
+              <a href="mailto:aurelia@vance-studio.com" class="c-val">aurelia@vance-studio.com</a>
+            </div>
+            <div class="c-detail-row">
+              <span class="c-label">Private Atelier:</span>
+              <span class="c-val">Via Montenapoleone 14, 20121 Milano, Italy</span>
+            </div>
+            <div class="c-detail-row">
+              <span class="c-label">New York Office:</span>
+              <span class="c-val">58 Franklin St, Tribeca, NY 10013</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Archello"><i class="fa-solid fa-shapes"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-col">
+          <form class="luxury-form" id="consultationForm" onsubmit="event.preventDefault(); handleFormSubmit();">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Your Full Name *</label>
+                <input type="text" id="fullName" placeholder="Eleanor Sterling" required />
+              </div>
+              <div class="form-group">
+                <label for="emailAddr">Email Address *</label>
+                <input type="email" id="emailAddr" placeholder="eleanor@domain.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectLocation">Project Location *</label>
+                <input type="text" id="projectLocation" placeholder="City or Region (e.g. Zurich, Soho NYC)" required />
+              </div>
+              <div class="form-group">
+                <label for="projectType">Spatial Typology</label>
+                <select id="projectType">
+                  <option value="residential">Private Residence / Villa</option>
+                  <option value="penthouse">Penthouse / Luxury Flat</option>
+                  <option value="hospitality">Boutique Hotel / Restaurant</option>
+                  <option value="commercial">Creative Office / Art Gallery</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectScope">Project Scope & Estimated Timelines</label>
+              <textarea id="projectScope" rows="4" placeholder="Describe the atmosphere, current stage of architecture, and approximate square footage..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Submit Spatial Inquiry <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY -->
+  <div class="modal" id="galleryModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close Preview">&times;</button>
+      <div class="modal-content">
+        <div class="modal-media">
+          <img src="" alt="" id="modalImg" />
+        </div>
+        <div class="modal-details">
+          <div class="modal-tag" id="modalCategory">RESIDENTIAL</div>
+          <h3 class="modal-title" id="modalTitle">Villa Serena</h3>
+          <div class="modal-location-date">
+            <span id="modalLocation"><i class="fa-solid fa-location-dot"></i> Lake Como</span>
+            <span id="modalYear"><i class="fa-regular fa-calendar"></i> 2024</span>
+          </div>
+          <p class="modal-desc" id="modalDesc">Detailed description of materials, custom lighting, and architectural intervention tailored for this space.</p>
+          <a href="#contact" class="btn btn-primary modal-action-btn" id="modalInquireBtn">Inquire About Similar Design</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="f-brand">AURELIA VANCE</span>
+        <span class="f-copy">&copy; <span id="currentYear"></span> Aurelia Vance Architecture & Interiors. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Press Kit</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
